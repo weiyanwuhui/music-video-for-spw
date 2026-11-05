@@ -1,0 +1,13 @@
+/build/
+/vendor/sdk/
+/vendor/runtime-lib/
+/release/*.spmod
+/release/*.zip
+/release/workshop-0.7.2/
+/release/workshop-*/cover.png
+*.log
+*.jfr
+*.hprof
+*.dmp
+.DS_Store
+Thumbs.db

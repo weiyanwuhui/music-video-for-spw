@@ -1,0 +1,99 @@
+{
+  "configs": [
+    {
+      "title": "Music Video for SPW",
+      "config": "config.json",
+      "preferences": [
+        {
+          "key": "show_sidebar",
+          "type": "switch",
+          "title": "显示 MV 侧边栏入口",
+          "summary": "显示在歌曲和曲风之间；关闭后仍可使用歌曲播放条上的 MV 按钮。",
+          "default_value": true
+        },
+        {
+          "type": "button",
+          "title": "MV 文件夹",
+          "summary": "点击 MV 时自动更新目录并匹配最佳视频；包含子文件夹。",
+          "arrow_type": "none",
+          "on_click": "local.spw.mv.MvPlugin.chooseFolder"
+        },
+        {
+          "type": "button",
+          "title": "重新扫描 MV 文件夹",
+          "arrow_type": "none",
+          "on_click": "local.spw.mv.MvPlugin.rescan"
+        },
+        {
+          "key": "auto_open",
+          "type": "switch",
+          "title": "切歌自动打开 MV",
+          "summary": "自动播放已关联或能明确匹配的视频，接近的版本需确认。",
+          "default_value": false
+        },
+        {
+          "type": "button",
+          "title": "为当前歌曲绑定 MV",
+          "summary": "选择本地视频并保存绑定，不开始播放。",
+          "arrow_type": "none",
+          "on_click": "local.spw.mv.MvPlugin.bindCurrent"
+        },
+        {
+          "type": "button",
+          "title": "停用当前歌曲的 MV 匹配",
+          "summary": "保留视频文件，停止本曲自动匹配。",
+          "arrow_type": "none",
+          "on_click": "local.spw.mv.MvPlugin.unbindCurrent"
+        },
+        {
+          "type": "button",
+          "title": "恢复当前歌曲自动匹配",
+          "arrow_type": "none",
+          "on_click": "local.spw.mv.MvPlugin.resumeMatching"
+        },
+        {
+          "type": "button",
+          "title": "添加 B 站 MV 链接",
+          "summary": "为当前歌曲保存视频链接，支持分 P 与 b23 分享短链。",
+          "arrow_type": "none",
+          "on_click": "local.spw.mv.MvPlugin.addBilibili"
+        },
+        {
+          "type": "button",
+          "title": "扫码登录 B 站",
+          "summary": "使用手机客户端扫码；登录凭据由 Windows 当前用户加密保存，不进入备份。",
+          "arrow_type": "none",
+          "on_click": "local.spw.mv.MvPlugin.loginBilibili"
+        },
+        {
+          "type": "button",
+          "title": "退出 B 站登录",
+          "summary": "清除本插件保存的账号凭据。",
+          "arrow_type": "none",
+          "on_click": "local.spw.mv.MvPlugin.logoutBilibili"
+        },
+        {
+          "type": "button",
+          "title": "自动备份文件",
+          "summary": "设置插件目录外的 JSON 文本文件，关联增删改会同步更新。",
+          "arrow_type": "none",
+          "on_click": "local.spw.mv.MvPlugin.backupFile"
+        },
+        {
+          "type": "button",
+          "title": "导出 MV 链接备份",
+          "summary": "导出歌曲身份与长期链接；不包含视频文件或登录凭据。",
+          "arrow_type": "none",
+          "on_click": "local.spw.mv.MvPlugin.exportBackup"
+        },
+        {
+          "type": "button",
+          "title": "导入 MV 链接备份",
+          "summary": "按歌曲合并恢复，备份中的同曲关联优先。",
+          "arrow_type": "none",
+          "on_click": "local.spw.mv.MvPlugin.importBackup"
+        }
+      ]
+    }
+  ]
+}
